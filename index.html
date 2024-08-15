@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         .single-slider::before {
             content: '';
             position: absolute;
@@ -193,7 +197,8 @@
 
         .about-title h5 {
             font-size: 1.25rem;
-            color: #e90a0a;;
+            color: #e90a0a;
+            ;
             margin-bottom: 10px;
         }
 
@@ -243,6 +248,39 @@
                 margin-bottom: 10px;
             }
         }
+
+        /* Ending of upper styles */
+
+
+
+        .footer-social {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-social .social-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-social .social-list li {
+            margin-right: 15px;
+        }
+
+        .footer-social .social-list li a {
+            color: white;
+            /* Adjust color as needed */
+            font-size: 20px;
+            /* Adjust size as needed */
+        }
+
+        .footer-social .social-list li a:hover {
+            color: #ccc;
+            /* Change color on hover if desired */
+        }
     </style>
 </head>
 
@@ -265,7 +303,7 @@
                                 <li>
                                     <div class="text">
                                         <i class="far fa-phone-alt"></i>
-                                        <div class="box"> <span>786-098-098-09</span></div>
+                                        <a href="tel:+9194694 44405">+91 94694 44405</a>
                                     </div>
                                 </li>
                                 <li>
@@ -301,38 +339,11 @@
                                 <nav id="mobile-menu" style="display: block;">
                                     <ul>
 
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li class="has-sub"><a href="#">Pages</a>
-                                            <ul>
-                                                <li><a href="projects.html">Gallery</a></li>
-                                                <li><a href="projects-detail.html">Gallery Details</a></li>
-
-
-
-                                                <li><a href="faq.html">Faq</a></li>
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="shop-details.html">Shop Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub">
-                                            <a href="services.html">Services</a>
-                                            <ul>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="services-detail.html">Services Details</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="has-sub">
-                                            <a href="blog.html">Blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-
-
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="#about2">About Us</a></li>
+                                        <li><a href="#services2">Our Services</a></li>
+                                        <li><a href="#about">Our Mission</a></li>
+                                        <li><a href="#testimonals2">Testimonials</a></li>
+                                        <li><a href="#services">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -370,7 +381,7 @@
         <div id="cssmenu3" class="menu-one-page-menu-container">
             <ul id="menu-one-page-menu-2" class="menu">
                 <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="about.html">About Us</a>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#about2">About Us</a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="services.html">Services</a>
                 </li>
@@ -381,7 +392,7 @@
                 <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="projects.html">Gallery
                         Study</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="blog.html">Blog</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="contact.html">Contact</a>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#services">Contact</a>
                 </li>
             </ul>
         </div>
@@ -479,7 +490,7 @@
                             data-delay=".4s">
                             <div class="about-title second-title pb-25">
                                 <h5>About Us</h5>
-                                <h2>Pioneering Sustainable Horticulture</h2>
+                                <h2>Pioneering Sustainable <br> Horticulture</h2>
                             </div>
 
                             <p>At Farm Vision, our mission is to empower farmers in Jammu and Kashmir by transforming
@@ -686,162 +697,116 @@
 
 
         <!-- Video Section Ends -->
-
-
-
-        <!-- testimonial-area -->
-        <section class="testimonial-area pt-120 pb-120">
+        <!-- Testimonial Area -->
+        <section id="testimonals2" class="testimonial-area pt-120 pb-120">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-title center-align mb-50 text-center">
+                        <div class="section-title text-center mb-50">
                             <h5>Testimonial</h5>
-                            <h2>
-                                What Our Clients Says About Us
-                            </h2>
-
+                            <h2>What Our Clients Say About Us</h2>
                         </div>
-
                     </div>
 
                     <div class="col-lg-12">
                         <div class="testimonial-active">
+                            <!-- Testimonial 1 -->
                             <div class="single-testimonial">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5">
-                                        <div class="test-img"><img src="img/testimonial/testi_avatar.png" alt="img">
+                                        <div class="test-img">
+                                            <img src="https://via.placeholder.com/200x300?text=Portrait+1"
+                                                alt="Client 1">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-7">
-                                        <p>From banking and insurance to wealth manage ent and securities distribution,
-                                            we dedicate financial on services the teams serve all major sectors.</p>
+                                        <p>Working with this team has been a game changer for our business. Their
+                                            insights and support have been invaluable.</p>
                                         <div class="testi-author">
-
                                             <div class="ta-info">
-                                                <h6>Margie R. Robinson</h6>
-                                                <span>Web Developer</span>
+                                                <h6>Jane Doe</h6>
+                                                <span>CEO, Company</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="img/testimonial/qt-icon.png" alt="Quote">
                                 </div>
                             </div>
+
+                            <!-- Testimonial 2 -->
                             <div class="single-testimonial">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5">
-                                        <div class="test-img"><img src="img/testimonial/testi_avatar2.png" alt="img">
+                                        <div class="test-img">
+                                            <img src="https://via.placeholder.com/200x300?text=Portrait+2"
+                                                alt="Client 2">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-7">
-                                        <p>From banking and insurance to wealth manage ent and securities distribution,
-                                            we dedicate financial on services the teams serve all major sectors.</p>
+                                        <p>Their professionalism and expertise are unmatched. They have consistently
+                                            delivered outstanding results.</p>
                                         <div class="testi-author">
-
                                             <div class="ta-info">
-                                                <h6>Roboto Dos</h6>
-                                                <span>Web Developer</span>
+                                                <h6>John Smith</h6>
+                                                <span>Marketing Director, Company</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="img/testimonial/qt-icon.png" alt="Quote">
                                 </div>
                             </div>
+
+                            <!-- Testimonial 3 -->
                             <div class="single-testimonial">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5">
-                                        <div class="test-img"><img src="img/testimonial/testi_avatar.png" alt="img">
+                                        <div class="test-img">
+                                            <img src="https://via.placeholder.com/200x300?text=Portrait+3"
+                                                alt="Client 3">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-7">
-                                        <p>From banking and insurance to wealth manage ent and securities distribution,
-                                            we dedicate financial on services the teams serve all major sectors.</p>
+                                        <p>An excellent experience from start to finish. Their attention to detail and
+                                            dedication is evident in their work.</p>
                                         <div class="testi-author">
-
                                             <div class="ta-info">
-                                                <h6>Margie R. Robinson</h6>
-                                                <span>Web Developer</span>
+                                                <h6>Emily Davis</h6>
+                                                <span>Product Manager, Company</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="img/testimonial/qt-icon.png" alt="Quote">
                                 </div>
                             </div>
+
+                            <!-- Testimonial 4 -->
                             <div class="single-testimonial">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5">
-                                        <div class="test-img"><img src="img/testimonial/testi_avatar2.png" alt="img">
+                                        <div class="test-img">
+                                            <img src="https://via.placeholder.com/200x300?text=Portrait+4"
+                                                alt="Client 4">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-7">
-                                        <p>From banking and insurance to wealth manage ent and securities distribution,
-                                            we dedicate financial on services the teams serve all major sectors.</p>
+                                        <p>Highly recommend their services. They exceeded our expectations and delivered
+                                            exceptional quality work.</p>
                                         <div class="testi-author">
-
                                             <div class="ta-info">
-                                                <h6>Roboto Dos</h6>
-                                                <span>Web Developer</span>
+                                                <h6>Michael Johnson</h6>
+                                                <span>Creative Director, Company</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="single-testimonial">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5">
-                                        <div class="test-img"><img src="img/testimonial/testi_avatar.png" alt="img">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-md-7">
-                                        <p>From banking and insurance to wealth manage ent and securities distribution,
-                                            we dedicate financial on services the teams serve all major sectors.</p>
-                                        <div class="testi-author">
-
-                                            <div class="ta-info">
-                                                <h6>Margie R. Robinson</h6>
-                                                <span>Web Developer</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="single-testimonial">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5">
-                                        <div class="test-img"><img src="img/testimonial/testi_avatar2.png" alt="img">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-md-7">
-                                        <p>From banking and insurance to wealth manage ent and securities distribution,
-                                            we dedicate financial on services the teams serve all major sectors.</p>
-                                        <div class="testi-author">
-
-                                            <div class="ta-info">
-                                                <h6>Roboto Dos</h6>
-                                                <span>Web Developer</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="img/testimonial/qt-icon.png" alt="Quote">
                                 </div>
                             </div>
                         </div>
@@ -849,39 +814,169 @@
                 </div>
             </div>
         </section>
-        <!-- testimonial-area-end -->
+        <!-- Testimonial Area End -->
 
 
 
 
- 
+        <section id="services" class="services-area pt-120 pb-90 fix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+
+                                <div class="services-box text-center mb-30">
+                                    <div class="services-icon">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="services-content2">
+                                        <h5>Email Address</h5>
+                                        <p>info@webexample.com <br /> jobs@webtrueexample.com</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+
+                                <div class="services-box text-center mb-30">
+                                    <div class="services-icon">
+                                        <i class="fal fa-phone-alt"></i>
+                                    </div>
+                                    <div class="services-content2">
+                                        <h5>Phone Number</h5>
+                                        <p>090-098-765-09 <br />093-456-432-654-7</p>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+
+                                <div class="services-box text-center mb-30">
+                                    <div class="services-icon">
+                                        <i class="fal fa-map-marked"></i>
+                                    </div>
+                                    <div class="services-content2">
+                                        <h5>Office Address</h5>
+                                        <p>12/A, Miranda Halim Tower,<br>New York, USA</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+
+                                <div class="services-box text-center mb-30">
+                                    <div class="services-icon">
+                                        <i class="fal fa-alarm-clock"></i>
+                                    </div>
+                                    <div class="services-content2">
+                                        <h5>Timeing</h5>
+                                        <p>Monday - Friday <br>9am - 6pm</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-bg02 ">
+                            <div class="section-title  mb-50">
+                                <h5>Contact</h5>
+                                <h2>
+                                    Get In Touch With Us
+                                </h2>
+
+                            </div>
+
+                            <form action="mail.php" method="post" class="contact-form mt-30">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="contact-field p-relative c-name mb-30">
+                                            <input type="text" id="firstn" name="firstn" placeholder="First Name"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="contact-field p-relative c-email mb-30">
+                                            <input type="text" id="lastn" name="lastn" placeholder="Last Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="contact-field p-relative c-subject mb-30">
+                                            <input type="text" id="email" name="email" placeholder="Eamil" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="contact-field p-relative c-subject mb-30">
+                                            <input type="text" id="phone" name="phone" placeholder="Phone No." required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="contact-field p-relative c-option mb-30">
+                                            <input type="text" id="subject" name="phone" placeholder="Subject" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="contact-field p-relative c-message mb-30">
+                                            <textarea name="message" id="message" cols="30" rows="10"
+                                                placeholder="Write comments"></textarea>
+                                        </div>
+                                        <div class="slider-btn">
+                                            <button class="btn ss-btn active" data-animation="fadeInRight"
+                                                data-delay=".8s">Submit Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- services-area-end -->
+
+
+
 
     </main>
     <!-- main-area-end -->
 
 
 
-
     <!-- footer -->
     <footer class="footer-bg footer-p"
-        style="background: url(img/applebg.jpg) no-repeat;background-size: cover; position: relative;">
+        style="background: url(img/applebg.jpg) no-repeat; background-size: cover; position: relative;">
         <div class="overlay"></div> <!-- Added overlay div -->
+
         <div class="footer-top pt-60 pb-40">
             <div class="container">
                 <div class="row justify-content-between">
 
+                    <!-- About Us Section -->
                     <div class="col-xl-3 col-lg-3 col-sm-6">
                         <div class="footer-widget mb-30">
                             <div class="f-widget-title mb-30">
                                 <h3 style="color: white;">Farm Vision</h3>
                             </div>
-                            <p>Our mission is to empower farmers in Jammu and Kashmir by transforming
-                                traditional hoticulture into modern, high-density apple orchards. We partner with local
-                                farmers, providing high-yielding trees and essential support to elevate productivity to
-                                global standards.</p>
-
+                            <p>Our mission is to empower farmers in Jammu and Kashmir by transforming traditional
+                                horticulture into modern, high-density apple orchards. We partner with local farmers,
+                                providing high-yielding trees and essential support to elevate productivity to global
+                                standards.</p>
                         </div>
                     </div>
+
+                    <!-- Quick Links Section -->
                     <div class="col-xl-2 col-lg-2 col-sm-6">
                         <div class="footer-widget mb-30">
                             <div class="f-widget-title">
@@ -890,14 +985,16 @@
                             <div class="footer-link">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html"> About Us</a></li>
-                                    <li><a href="services.html"> Services </a></li>
-                                    <li><a href="contact.html"> Contact Us</a></li>
-                                    <li><a href="blog.html">Blog </a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Contact Details Section -->
                     <div class="col-xl-3 col-lg-3 col-sm-6">
                         <div class="footer-widget mb-30">
                             <div class="f-widget-title">
@@ -907,12 +1004,12 @@
                                 <ul>
                                     <li>
                                         <i class="icon fal fa-phone"></i>
-                                        <span>1800-121-3637<br>+91-7052-101-786</span>
+                                        <a href="tel:+9194694 44405">+91 94694 44405</a>
                                     </li>
-                                    <li><i class="icon fal fa-envelope"></i>
+                                    <li>
+                                        <i class="icon fal fa-envelope"></i>
                                         <span>
-                                            <a href="mailto:info@example.com">info@example.com</a>
-                                            <br>
+                                            <a href="mailto:info@example.com">info@example.com</a><br>
                                             <a href="mailto:help@example.com">help@example.com</a>
                                         </span>
                                     </li>
@@ -920,32 +1017,26 @@
                                         <i class="icon fal fa-map-marker-check"></i>
                                         <span>1247/Plot No. 39, 15th Phase</span>
                                     </li>
-
                                 </ul>
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-sm-6">
-                        <div class="footer-widget newlater-footer mb-30">
-                            <div class="f-widget-title mb-30">
-                                <h3>Form WIll Be designed here !</h3>
-                                <h5>Form WIll Be designed here !</h5>
-                                <p>Form WIll Be designed here !</p>
+
+                    <!-- Social Media Links Section -->
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Follow Us</h2>
                             </div>
-                            <div class="footer-link">
-                                <div class="subricbe p-relative" data-animation="fadeInDown" data-delay=".4s">
-                                    <form action="news-mail.php" method="post" class="contact-form ">
-                                        <input type="text" id="email2" name="email2" class="header-input"
-                                            placeholder="Your Email..." required>
-                                        <button class="btn"> Subscribe Now </button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="footer-social  mt-30">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            <div class="footer-social">
+                                <ul class="social-list">
+                                    <li><a href="https://www.facebook.com" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.twitter.com" target="_blank"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com" target="_blank"><i
+                                                class="fab fa-instagram"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -953,6 +1044,7 @@
                 </div>
             </div>
         </div>
+
         <div class="copyright-wrap">
             <div class="container">
                 <div class="row align-items-center">
@@ -960,15 +1052,14 @@
                         Copyright © 2024 Syed Dayim Shah. All rights reserved.
                     </div>
                     <div class="col-lg-6 text-right text-xl-right">
-
+                        <!-- Additional footer content can be added here if needed -->
                     </div>
-
                 </div>
             </div>
         </div>
     </footer>
-
     <!-- footer-end -->
+
 
 
     <!-- JS here -->
