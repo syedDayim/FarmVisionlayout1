@@ -345,6 +345,56 @@
                 margin-bottom: 20px;
             }
         }
+        
+        @media (max-width: 768px) {
+            .slider-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        /* Adjust the heading font size and spacing */
+        .slider-content h2 {
+            font-size: 60px; /* Increase the heading size slightly */
+            margin-bottom: 15px; /* Add space below the heading */
+            color: #ffffff; /* Ensure text is visible */
+            font-weight: bold; /* Make the text stand out */
+            /* margin: 0 auto; */
+        }
+
+        /* Adjust paragraph font size and line height for better readability */
+        .slider-content p {
+            font-size: 20px; /* Increase font size for better readability */
+            /* line-height: 1.6; Slightly increase line height for easier reading */
+            padding-top: 10px;
+            margin-bottom: 20px; /* Add space below the paragraph */
+            color: #fff; /* Ensure text is visible */
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* Style adjustments for buttons */
+
+        .slider-btn{
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider-btn a {
+            font-size: 16px; /* Slightly larger font for better touch targets */
+            padding: 12px 25px; /* Adjust padding for more tappable buttons */
+            margin-right: 10px; /* Reduce margin between buttons */
+            border-radius: 25px; /* Round the buttons for a softer look */
+        }
+
+        /* Adjust the spacing of the container */
+        .row.pt-50 {
+            padding-top: 20px; /* Reduce top padding to bring content higher on the screen */
+        }
+    }
+
+        
     </style>
 </head>
 
@@ -504,34 +554,27 @@
                         <div class="row justify-content-center pt-50">
                             <div class="col-lg-10 col-md-10">
                                 <div class="slider-content s-slider-content">
-                                    <!-- <h5 data-animation="fadeInDown" data-delay=".4s">Welcome to</h5> -->
-                                    <h2 style="white-space: nowrap;" data-animation="fadeInUp" data-delay=".4s">Farm
-                                        Vision</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s">We build lasting relationships with
-                                        farmers and partners, supporting orchards from concept to full bloom. Through
-                                        collaboration, trust, and shared vision, we ensure every orchard thrives, and
-                                        every farmer prospers, cultivating a successful and sustainable future together.
-                                    </p>
+                                    <h2 style="white-space: nowrap;" data-animation="fadeInUp" data-delay=".4s">Farm Vision</h2>
+                                    <p data-animation="fadeInUp" data-delay=".6s">We build lasting relationships with farmers and partners, supporting orchards from concept to full bloom. Through collaboration, trust, and shared vision, we ensure every orchard thrives, and every farmer prospers, cultivating a successful and sustainable future together.</p>
                                     <div class="slider-btn mt-30">
-                                        <a href="#about2" class="btn ss-btn mr-15" data-animation="fadeInRight"
-                                            data-delay=".8s">Read More</a>
-                                        <a href="#services" class="btn ss-btn active mr-15"
-                                            data-animation="fadeInRight" data-delay=".8s">Contact Us</a>
+                                        <a href="#about2" class="btn ss-btn mr-15" data-animation="fadeInRight" data-delay=".8s">Read More</a>
+                                        <a href="#services" class="btn ss-btn active mr-15" data-animation="fadeInRight" data-delay=".8s">Contact Us</a>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
+        
             <div class="back-to-top text-center">
                 <a href="#about2" class="smoth-scroll"><img src="img/bg/back-to-top.png" alt="back-to-top"></a>
             </div>
-
+        
         </section>
+        
+   
+        
 
         <!-- slider-area-end -->
 
