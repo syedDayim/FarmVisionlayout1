@@ -27,6 +27,71 @@
             scroll-behavior: smooth;
         }
 
+        .header-top.second-header {
+            background-color: black;
+            /* Adds black background color to the logo header on larger screens */
+            height: 70px;
+            /* Adjust this value as needed for the desired height */
+            line-height: 70px;
+            /* Ensures the text inside the header is vertically centered */
+            padding: 0;
+            /* Removes any padding that might cause extra height */
+        }
+
+
+
+        #header-sticky.menu-area {
+            background-color: white;
+            /* Adds white background color to the navigation header on larger screens */
+            margin-top: 0;
+        }
+
+        .header-top.second-header h2,
+        .header-top.second-header a {
+            color: white;
+            /* Ensures text in the logo header is white on larger screens */
+        }
+
+        #header-sticky.menu-area a {
+            color: black;
+            /* Ensures nav links are black on larger screens */
+        }
+
+        @media (max-width: 1199px) {
+            #header-sticky.menu-area a {
+                font-size: 14px;
+                /* Adjust this value to make the font size smaller */
+            }
+        }
+
+
+
+
+        @media (max-width: 992px) {
+            .header-top.second-header {
+                background-color: black;
+                /* Adds black background color to the logo header on larger screens */
+            }
+
+            #header-sticky.menu-area {
+                background-color: rgb(0, 0, 0);
+                /* Adds white background color to the navigation header on larger screens */
+            }
+
+            .header-top.second-header h2,
+            .header-top.second-header a {
+                color: rgb(0, 0, 0);
+                /* Ensures text in the logo header is white on larger screens */
+            }
+
+            #header-sticky.menu-area a {
+                color: black;
+                /* Ensures nav links are black on larger screens */
+            }
+        }
+
+
+
         .single-slider::before {
             content: '';
             position: absolute;
@@ -345,60 +410,73 @@
                 margin-bottom: 20px;
             }
         }
-        
+
         @media (max-width: 768px) {
-            .slider-content{
+            .slider-content {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
-        /* Adjust the heading font size and spacing */
-        .slider-content h2 {
-            font-size: 60px; /* Increase the heading size slightly */
-            margin-bottom: 15px; /* Add space below the heading */
-            color: #ffffff; /* Ensure text is visible */
-            font-weight: bold; /* Make the text stand out */
-            /* margin: 0 auto; */
-            text-align: center;
-        }
 
-        /* Adjust paragraph font size and line height for better readability */
-        .slider-content p {
-            font-size: 20px; /* Increase font size for better readability */
-            line-height: 1; 
-            padding-top: 10px;
-            margin-bottom: 20px; /* Add space below the paragraph */
-            color: #fff; /* Ensure text is visible */
-            text-align: center;
-            margin: 0 auto;
-        }
-        .subheading{
-            line-height: 50px;
-        }
+            /* Adjust the heading font size and spacing */
+            .slider-content h2 {
+                font-size: 60px;
+                /* Increase the heading size slightly */
+                margin-bottom: 15px;
+                /* Add space below the heading */
+                color: #ffffff;
+                /* Ensure text is visible */
+                font-weight: bold;
+                /* Make the text stand out */
+                /* margin: 0 auto; */
+                text-align: center;
+            }
 
-        /* Style adjustments for buttons */
+            /* Adjust paragraph font size and line height for better readability */
+            .slider-content p {
+                font-size: 20px;
+                /* Increase font size for better readability */
+                line-height: 1;
+                padding-top: 10px;
+                margin-bottom: 20px;
+                /* Add space below the paragraph */
+                color: #fff;
+                /* Ensure text is visible */
+                text-align: left;
+                margin: 0 auto;
+            }
 
-        .slider-btn{
-            /* border: 2px solid red; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .slider-btn a {
-            font-size: 16px; /* Slightly larger font for better touch targets */
-            padding: 12px 25px; /* Adjust padding for more tappable buttons */
-            margin-right: 10px; /* Reduce margin between buttons */
-            border-radius: 25px; /* Round the buttons for a softer look */
-        }
+            .subheading {
+                line-height: 50px;
+            }
 
-        /* Adjust the spacing of the container */
-        .row.pt-50 {
-            padding-top: 20px; /* Reduce top padding to bring content higher on the screen */
-        }
-    }
+            /* Style adjustments for buttons */
 
-        
+            .slider-btn {
+                /* border: 2px solid red; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .slider-btn a {
+                font-size: 16px;
+                /* Slightly larger font for better touch targets */
+                padding: 12px 25px;
+                /* Adjust padding for more tappable buttons */
+                margin-right: 10px;
+                /* Reduce margin between buttons */
+                border-radius: 25px;
+                /* Round the buttons for a softer look */
+            }
+
+            /* Adjust the spacing of the container */
+            .row.pt-50 {
+                padding-top: 20px;
+                /* Reduce top padding to bring content higher on the screen */
+            }
+        }
     </style>
 </head>
 
@@ -558,12 +636,24 @@
                         <div class="row justify-content-center pt-50">
                             <div class="col-lg-10 col-md-10">
                                 <div class="slider-content s-slider-content">
-                                    <h2 style="white-space: nowrap; margin-bottom: 0px;" data-animation="fadeInUp" data-delay=".4s">Farm Vision</h2>
-                                    <p style="margin-bottom: 30px; font-size: 30px; font-weight: bold;" class="subheading" data-animation="fadeInUp" data-delay=".6s">Your Farm Our Vision</p>
-                                    <p data-animation="fadeInUp" data-delay=".6s">We build lasting relationships with farmers and partners, supporting orchards from concept to full bloom. Through collaboration, trust, and shared vision, we ensure every orchard thrives, and every farmer prospers, cultivating a successful and sustainable future together.</p>
+
+                                    <h2 style="white-space: nowrap; margin-bottom: 0px;" data-animation="fadeInUp"
+                                        data-delay=".4s">Farm Vision</h2>
+                                    <p style="margin-bottom: 30px; font-size: 25px; font-weight: bold; "
+                                        class="subheading" data-animation="fadeInUp" data-delay=".6s">Your Farm Our
+                                        Vision</p>
+
+
+                                    <p data-animation="fadeInUp" data-delay=".6s">We build lasting relationships with
+                                        farmers and partners, supporting orchards from concept to full bloom. Through
+                                        collaboration, trust, and shared vision, we ensure every orchard thrives, and
+                                        every farmer prospers, cultivating a successful and sustainable future together.
+                                    </p>
                                     <div class="slider-btn mt-30">
-                                        <a href="#about2" class="btn ss-btn mr-15" data-animation="fadeInRight" data-delay=".8s">Read More</a>
-                                        <a href="#services" class="btn ss-btn active mr-15" data-animation="fadeInRight" data-delay=".8s">Contact Us</a>
+                                        <a href="#about2" class="btn ss-btn mr-15" data-animation="fadeInRight"
+                                            data-delay=".8s">Read More</a>
+                                        <a href="#services" class="btn ss-btn active mr-15" data-animation="fadeInRight"
+                                            data-delay=".8s">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
@@ -571,15 +661,15 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="back-to-top text-center">
                 <a href="#about2" class="smoth-scroll"><img src="img/bg/back-to-top.png" alt="back-to-top"></a>
             </div>
-        
+
         </section>
-        
-   
-        
+
+
+
 
         <!-- slider-area-end -->
 
@@ -650,98 +740,91 @@
 
         <!-- about-area-end -->
 
-        <!-- services-area -->
-        <section id="services2" class="services-area2 pt-120 pb-90 fix p-relative" style="background: #f4f7fe;">
-
-            <div class="container">
-
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="section-title pb-25">
-                            <h5>Our Services</h5>
-                            <h2>
-                                Designing the Future of Apple Orchards
-                            </h2>
-                        </div>
-                        <p>Crafting Excellence in Every Orchard. Our services cover every stage, ensuring your orchard
-                            thrives with cutting-edge techniques and sustainable practices.</p>
+<!-- services-area -->
+<section id="services2" class="services-area2 pt-120 pb-90 fix p-relative" style="background: #f4f7fe;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="section-title pb-25">
+                    <h5>Our Services</h5>
+                    <h2>Designing the Future of Apple Orchards</h2>
+                </div>
+                <p>Crafting Excellence in Every Orchard. Our services cover every stage, ensuring your orchard
+                    thrives with cutting-edge techniques and sustainable practices.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-box2 mb-30">
+                    <div class="services-icon">
+                        <i class="fas fa-seedling" style="color: white;"></i>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="services-box2 mb-30">
-                            <div class="services-icon">
-                                <img src="img/icon/se-icon1.png" alt="icon01">
-                            </div>
-                            <div class="services-content2">
-                                <h5><a href="services-detail.html">High-Density Orchard Planning & Design</a></h5>
-                                <p>We offer expert consultation and customized design services to create ultra
-                                    high-density apple orchards tailored to your land's unique characteristics,
-                                    maximizing productivity and sustainability.
-                                </p>
-                                <br>
-                            </div>
-                        </div>
+                    <div class="services-content2">
+                        <h5><a href="services-detail.html">High-Density Orchard Planning & Design</a></h5>
+                        <p>We offer expert consultation and customized design services to create ultra
+                            high-density apple orchards tailored to your land's unique characteristics,
+                            maximizing productivity and sustainability.
+                        </p>
+                        <br>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="services-box2 mb-30">
-                            <div class="services-icon">
-                                <img src="img/icon/se-icon2.png" alt="icon01">
-                            </div>
-                            <div class="services-content2">
-                                <h5><a href="services-detail.html"> Supply of High-Yielding Trees</a></h5>
-                                <p>We provide top-quality apple trees on advanced rootstock sourced from Europe’s
-                                    leading nurseries, ensuring your orchard’s success from the very start.</p>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="services-box2 mb-30">
-                            <div class="services-icon">
-                                <img src="img/icon/se-icon3.png" alt="icon01">
-                            </div>
-                            <div class="services-content2">
-                                <h5><a href="services-detail.html"> Orchard Infrastructure Development</a></h5>
-                                <p>From trellising systems to irrigation solutions, we supply and install all necessary
-                                    support structures to ensure optimal growth and ease of management.
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="services-box2 mb-30">
-                            <div class="services-icon">
-                                <img src="img/icon/se-icon4.png" alt="icon01">
-                            </div>
-                            <div class="services-content2">
-                                <h5><a href="services-detail.html"> Training & Technical Support</a></h5>
-                                <p>We empower farmers with the knowledge and skills needed to manage modern orchards
-                                    through hands-on training and ongoing technical support, ensuring your long-term
-                                    success. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="services-box2 mb-30">
-                            <div class="services-icon">
-                                <img src="img/icon/se-icon5.png" alt="icon01">
-                            </div>
-                            <div class="services-content2">
-                                <h5><a href="services-detail.html">Post-Planting Management</a></h5>
-                                <p>Our services don’t stop at planting. We offer guidance on pruning, pest management,
-                                    and overall orchard maintenance to help you achieve the highest yields possible</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                 </div>
             </div>
-        </section>
-        <!-- services-area-end -->
+            <div class="col-lg-4 col-md-6">
+                <div class="services-box2 mb-30">
+                    <div class="services-icon">
+                        <i class="fas fa-tree" style="color: white;"></i>
+                    </div>
+                    <div class="services-content2">
+                        <h5><a href="services-detail.html">Supply of High-Yielding Trees</a></h5>
+                        <p>We provide top-quality apple trees on advanced rootstock sourced from Europe’s
+                            leading nurseries, ensuring your orchard’s success from the very start.</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-box2 mb-30">
+                    <div class="services-icon">
+                        <i class="fas fa-tools" style="color: white;"></i>
+                    </div>
+                    <div class="services-content2">
+                        <h5><a href="services-detail.html">Orchard Infrastructure Development</a></h5>
+                        <p>From trellising systems to irrigation solutions, we supply and install all necessary
+                            support structures to ensure optimal growth and ease of management.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-box2 mb-30">
+                    <div class="services-icon">
+                        <i class="fas fa-chalkboard-teacher" style="color: white;"></i>
+                    </div>
+                    <div class="services-content2">
+                        <h5><a href="services-detail.html">Training & Technical Support</a></h5>
+                        <p>We empower farmers with the knowledge and skills needed to manage modern orchards
+                            through hands-on training and ongoing technical support, ensuring your long-term
+                            success. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-box2 mb-30">
+                    <div class="services-icon">
+                        <i class="fas fa-hand-holding-seedling" style="color: white;"></i>
+                    </div>
+                    <div class="services-content2">
+                        <h5><a href="services-detail.html">Post-Planting Management</a></h5>
+                        <p>Our services don’t stop at planting. We offer guidance on pruning, pest management,
+                            and overall orchard maintenance to help you achieve the highest yields possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- services-area-end -->
+
 
         <!-- Video Section Starts -->
 
@@ -853,16 +936,17 @@
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5">
                                         <div class="test-img">
-                                            <img style="border-radius: 10px;" src="./img/test1.jpg"
-                                                alt="Client 1">
+                                            <img style="border-radius: 10px;" src="./img/test1.jpg" alt="Client 1">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-7">
-                                        <p>Working with Farm Vision Grow has completely transformed my orchard. Their high-density planting and ongoing support have doubled my yields. I now produce apples that compete with the best in the world!.</p>
+                                        <p>Working with Farm Vision Grow has completely transformed my orchard. Their
+                                            high-density planting and ongoing support have doubled my yields. I now
+                                            produce apples that compete with the best in the world!.</p>
                                         <div class="testi-author">
                                             <div class="ta-info">
                                                 <h6>Riyaaz Ahmad</h6>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -877,16 +961,18 @@
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5">
                                         <div class="test-img">
-                                            <img style="border-radius: 10px;" src="./img/test2.jpg"
-                                                alt="Client 2">
+                                            <img style="border-radius: 10px;" src="./img/test2.jpg" alt="Client 2">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-7">
-                                        <p>Farm Vision Grow has significantly improved my farm's productivity. Their expertise in high-density planting and continuous guidance have led to a remarkable increase in my yields. My produce now stands out among the best in the market!</p>
+                                        <p>Farm Vision Grow has significantly improved my farm's productivity. Their
+                                            expertise in high-density planting and continuous guidance have led to a
+                                            remarkable increase in my yields. My produce now stands out among the best
+                                            in the market!</p>
                                         <div class="testi-author">
                                             <div class="ta-info">
                                                 <h6>Showkat Ahmad</h6>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -901,16 +987,18 @@
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5">
                                         <div class="test-img">
-                                            <img style="border-radius: 10px;" src="./img/test3.jpg"
-                                                alt="Client 2">
+                                            <img style="border-radius: 10px;" src="./img/test3.jpg" alt="Client 2">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-7">
-                                        <p>Farm Vision Grow has significantly improved my farm's productivity. Their expertise in high-density planting and continuous guidance have led to a remarkable increase in my yields. My produce now stands out among the best in the market!</p>
+                                        <p>Farm Vision Grow has significantly improved my farm's productivity. Their
+                                            expertise in high-density planting and continuous guidance have led to a
+                                            remarkable increase in my yields. My produce now stands out among the best
+                                            in the market!</p>
                                         <div class="testi-author">
                                             <div class="ta-info">
                                                 <h6>Showkat Ahmad</h6>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -920,9 +1008,9 @@
                                 </div>
                             </div>
 
-                     
 
-                          
+
+
                         </div>
                     </div>
                 </div>
