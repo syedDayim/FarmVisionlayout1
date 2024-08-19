@@ -1,14 +1,21 @@
 <?php
+// Capture form data
 $firstn = $_POST['firstn'];
 $lastn = $_POST['lastn'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$services = $_POST['services'];
+$subject = $_POST['subject'];
 $message = $_POST['message'];
-$formcontent="First Name: $firstn \n Last Name: $lastn \n Email: $email \n Services: $services \n Phone: $phone \n Message: $message";
-$recipient = "info@farmvision.in";
-$subject = "Contact Form";
+
+// Prepare email content
+$formcontent = "First Name: $firstn \nLast Name: $lastn \nEmail: $email \nPhone: $phone \nSubject: $subject \nMessage: $message";
+$recipient = "info@farmvision.in"; // Your email address
 $mailheader = "From: $email \r\n";
+
+// Send email
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-require_once "thank-you.html";
+
+// Redirect to thankyou.html
+header("Location: thankyou.html");
+exit();
 ?>
