@@ -26,97 +26,149 @@
         html {
             scroll-behavior: smooth;
         }
-
+    
         .header-top.second-header {
             background-color: black;
-            /* Adds black background color to the logo header on larger screens */
             height: 70px;
-            /* Adjust this value as needed for the desired height */
             line-height: 70px;
-            /* Ensures the text inside the header is vertically centered */
             padding: 0;
-            /* Removes any padding that might cause extra height */
         }
-
-
-
+    
         #header-sticky.menu-area {
             background-color: white;
-            /* Adds white background color to the navigation header on larger screens */
             margin-top: 0;
         }
-
+    
         .header-top.second-header h2,
         .header-top.second-header a {
             color: white;
-            /* Ensures text in the logo header is white on larger screens */
         }
-
+    
         #header-sticky.menu-area a {
             color: black;
-            /* Ensures nav links are black on larger screens */
         }
-
+    
         @media (max-width: 1199px) {
             #header-sticky.menu-area a {
                 font-size: 14px;
-                /* Adjust this value to make the font size smaller */
             }
         }
-
-
-
-
+    
         @media (max-width: 992px) {
             .header-top.second-header {
                 background-color: black;
-                /* Adds black background color to the logo header on larger screens */
             }
-
+    
             #header-sticky.menu-area {
                 background-color: rgb(0, 0, 0);
-                /* Adds white background color to the navigation header on larger screens */
             }
-
+    
             .header-top.second-header h2,
             .header-top.second-header a {
                 color: rgb(0, 0, 0);
-                /* Ensures text in the logo header is white on larger screens */
             }
-
+    
             #header-sticky.menu-area a {
                 color: black;
-                /* Ensures nav links are black on larger screens */
             }
         }
-
-
-
+    
+        .slider-area {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .single-slider {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+    
         .single-slider::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            right: 0;
+            bottom: 0;
             background-color: rgba(0, 0, 0, 0.5);
-            /* Adjust the color and opacity as needed */
-            z-index: 1;
         }
-
+    
         .slider-content {
             position: relative;
-            z-index: 2;
-            /* Ensures the content is above the overlay */
+            z-index: 1;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
+    
+        .slider-content h2 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    
+        .slider-content .subheading {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    
+        .slider-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    
+        .slider-btn {
+            display: flex;
+            gap: 15px;
+        }
+    
+        .slider-btn .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    
+        .slider-btn .btn.ss-btn {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+    
+        .slider-btn .btn.ss-btn.active,
+        .slider-btn .btn.ss-btn:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    
+        .back-to-top {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
         #editor-choice {
             position: relative;
             background: url('img/applebg.jpg') no-repeat center center;
             background-size: cover;
             overflow: hidden;
         }
-
+    
         #editor-choice .overlay {
             position: absolute;
             top: 0;
@@ -124,25 +176,20 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            /* Black overlay with 50% opacity */
             z-index: 1;
         }
-
+    
         #editor-choice .container {
             position: relative;
             z-index: 2;
-            /* Ensures content is above the overlay */
         }
-
-        /* This is the css for about section */
-
+    
         .product__img img {
             width: 100%;
             height: auto;
             object-fit: cover;
-            /* Ensures the image covers its container while maintaining aspect ratio */
         }
-
+    
         .product-action a {
             display: inline-block;
             padding: 10px 20px;
@@ -152,16 +199,16 @@
             margin-top: 10px;
             transition: background-color 0.3s;
         }
-
+    
         .product-action a:hover {
             background-color: #218838;
         }
-
+    
         .footer-bg {
             position: relative;
             z-index: 1;
         }
-
+    
         .footer-bg::before {
             content: "";
             position: absolute;
@@ -170,23 +217,22 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
-            /* Black overlay with 50% opacity */
             z-index: -1;
         }
-
+    
         .footer-top,
         .copyright-wrap {
             position: relative;
             z-index: 2;
         }
-
+    
         .image-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 15px;
         }
-
+    
         .image-grid img {
             width: 100%;
             height: 100%;
@@ -195,15 +241,13 @@
             cursor: pointer;
             transition: transform 0.2s;
         }
-
+    
         .image-grid img:hover {
             transform: scale(1.05);
         }
-
-        /* Modal Styles */
+    
         .modal {
             display: none;
-            /* Hidden by default */
             position: fixed;
             z-index: 1;
             left: 0;
@@ -215,14 +259,14 @@
             background-color: rgba(0, 0, 0, 0.8);
             padding-top: 60px;
         }
-
+    
         .modal-content {
             margin: auto;
             display: block;
             width: 80%;
             max-width: 700px;
         }
-
+    
         .close {
             position: absolute;
             top: 10px;
@@ -232,97 +276,73 @@
             font-weight: bold;
             cursor: pointer;
         }
-
+    
         .close:hover,
         .close:focus {
             color: #bbb;
             text-decoration: none;
             cursor: pointer;
         }
-
+    
         #caption {
             color: #ccc;
             padding: 10px 20px;
             text-align: center;
         }
-
-
-        /* This is the css for Video section */
-
+    
         .s-about-img img {
             width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
+    
         .about-content {
             padding: 20px;
         }
-
+    
         .about-title h5 {
             font-size: 1.25rem;
             color: #e90a0a;
-            ;
             margin-bottom: 10px;
         }
-
+    
         .about-title h2 {
             font-size: 2.5rem;
             color: #111111;
         }
-
+    
         .ab-ul {
             list-style: none;
             padding: 0;
         }
-
+    
         .ab-ul li {
             display: flex;
             align-items: flex-start;
             margin-bottom: 20px;
         }
-
+    
         .ab-ul .icon {
             font-size: 1.5rem;
             color: #4CAF50;
-            /* Adjust color as needed */
             margin-right: 10px;
         }
-
+    
         .ab-ul .text {
             font-size: 1rem;
             color: #666;
         }
-
+    
         .pt-10 {
             padding-top: 10px;
         }
-
-        @media (max-width: 768px) {
-            .about-title h2 {
-                font-size: 2rem;
-            }
-
-            .ab-ul li {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .ab-ul .icon {
-                margin-bottom: 10px;
-            }
-        }
-
-        /* Ending of upper styles */
-
-
-
+    
         .footer-social {
             display: flex;
             justify-content: space-between;
         }
-
+    
         .footer-social .social-list {
             list-style: none;
             padding: 0;
@@ -330,151 +350,116 @@
             display: flex;
             justify-content: space-around;
         }
-
+    
         .footer-social .social-list li {
             margin-right: 15px;
         }
-
+    
         .footer-social .social-list li a {
             color: white;
-            /* Adjust color as needed */
             font-size: 20px;
-            /* Adjust size as needed */
         }
-
+    
         .footer-social .social-list li a:hover {
             color: #ccc;
-            /* Change color on hover if desired */
         }
-
-        /* From the founder */
-
+    
         .agrisense-founder-section {
             width: 100%;
             background-color: #f4f4f4;
             padding: 60px 0;
         }
-
+    
         .agrisense-founder-container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+    
         .agrisense-founder-heading {
             color: #333;
             border-left: 4px solid #8bc34a;
             padding-left: 10px;
             margin-bottom: 30px;
         }
-
+    
         .agrisense-founder-quote-box {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 30px;
             position: relative;
         }
-
+    
         .agrisense-founder-quote-icon {
             position: absolute;
             top: 20px;
             left: 20px;
         }
-
+    
         .agrisense-founder-quote {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
             padding-left: 60px;
         }
-
+    
         .agrisense-founder-author {
             font-style: italic;
             color: #666;
             text-align: right;
             margin: 0;
         }
-
-        @media (max-width: 768px) {
-            .agrisense-founder-section {
-                padding: 40px 0;
-            }
-
-            .agrisense-founder-quote {
-                font-size: 16px;
-                padding-left: 0;
-            }
-
-            .agrisense-founder-quote-icon {
-                position: static;
-                margin-bottom: 20px;
-            }
-        }
-
+    
         @media (max-width: 768px) {
             .slider-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                text-align: left;
+                padding: 20px;
             }
-
-            /* Adjust the heading font size and spacing */
+    
             .slider-content h2 {
-                font-size: 60px;
-                /* Increase the heading size slightly */
-                margin-bottom: 15px;
-                /* Add space below the heading */
-                color: #ffffff;
-                /* Ensure text is visible */
-                font-weight: bold;
-                /* Make the text stand out */
-                /* margin: 0 auto; */
+                font-size: 3rem;
+                margin-bottom: 10px;
                 text-align: center;
             }
-
-            /* Adjust paragraph font size and line height for better readability */
+    
+            .slider-content .subheading {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+    
             .slider-content p {
-                font-size: 20px;
-                /* Increase font size for better readability */
-                line-height: 1;
-                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 1.5;
                 margin-bottom: 20px;
-                /* Add space below the paragraph */
-                color: #fff;
-                /* Ensure text is visible */
-                text-align: left;
-                margin: 0 auto;
+                text-align: justify;
             }
-
-            .subheading {
-                line-height: 50px;
-            }
-
-            /* Style adjustments for buttons */
-
+    
             .slider-btn {
-                /* border: 2px solid red; */
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                flex-direction: row;
+                align-items: flex-start;
             }
-
-            .slider-btn a {
-                font-size: 16px;
-                /* Slightly larger font for better touch targets */
-                padding: 12px 25px;
-                /* Adjust padding for more tappable buttons */
-                margin-right: 10px;
-                /* Reduce margin between buttons */
-                border-radius: 25px;
-                /* Round the buttons for a softer look */
+    
+            .slider-btn .btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+                margin-bottom: 10px;
+                width: auto;
+                min-width: 150px;
             }
-
-            /* Adjust the spacing of the container */
-            .row.pt-50 {
-                padding-top: 20px;
-                /* Reduce top padding to bring content higher on the screen */
+        }
+    
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .slider-content h2 {
+                font-size: 3rem;
+            }
+    
+            .slider-content .subheading {
+                font-size: 1.6rem;
+            }
+    
+            .slider-content p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -551,6 +536,8 @@
                                             target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="https://www.instagram.com/farm_vision_?igsh=MXhuNXJtNHZ6aWYxYQ=="
                                             target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/farm-vision-a2584b323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+                                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -635,25 +622,13 @@
                     <div class="container">
                         <div class="row justify-content-center pt-50">
                             <div class="col-lg-10 col-md-10">
-                                <div class="slider-content s-slider-content">
-
-                                    <h2 style="white-space: nowrap; margin-bottom: 0px;" data-animation="fadeInUp"
-                                        data-delay=".4s">Farm Vision</h2>
-                                    <p style="margin-bottom: 30px; font-size: 25px; font-weight: bold; "
-                                        class="subheading" data-animation="fadeInUp" data-delay=".6s">Your Farm Our
-                                        Vision</p>
-
-
-                                    <p data-animation="fadeInUp" data-delay=".6s">We build lasting relationships with
-                                        farmers and partners, supporting orchards from concept to full bloom. Through
-                                        collaboration, trust, and shared vision, we ensure every orchard thrives, and
-                                        every farmer prospers, cultivating a successful and sustainable future together.
-                                    </p>
-                                    <div class="slider-btn mt-30">
-                                        <a href="#about2" class="btn ss-btn mr-15" data-animation="fadeInRight"
-                                            data-delay=".8s">Read More</a>
-                                        <a href="#services" class="btn ss-btn active mr-15" data-animation="fadeInRight"
-                                            data-delay=".8s">Contact Us</a>
+                                <div class="slider-content">
+                                    <h2>Farm Vision</h2>
+                                    <p class="subheading">Your Farm Our Vision</p>
+                                    <p>We build lasting relationships with farmers and partners, supporting orchards from concept to full bloom. Through collaboration, trust, and shared vision, we ensure every orchard thrives, and every farmer prospers, cultivating a successful and sustainable future together.</p>
+                                    <div class="slider-btn">
+                                        <a href="#about2" class="btn ss-btn">READ MORE</a>
+                                        <a href="#services" class="btn ss-btn active">CONTACT US</a>
                                     </div>
                                 </div>
                             </div>
@@ -741,86 +716,28 @@
         <!-- about-area-end -->
 
 <!-- services-area -->
-<section id="services2" class="services-area2 pt-120 pb-90 fix p-relative" style="background: #f4f7fe;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="section-title pb-25">
-                    <h5>Our Services</h5>
-                    <h2>Designing the Future of Apple Orchards</h2>
-                </div>
-                <p>Crafting Excellence in Every Orchard. Our services cover every stage, ensuring your orchard
-                    thrives with cutting-edge techniques and sustainable practices.</p>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="services-box2 mb-30">
-                    <div class="services-icon">
-                        <i class="fas fa-seedling" style="color: white;"></i>
-                    </div>
-                    <div class="services-content2">
-                        <h5><a href="services-detail.html">High-Density Orchard Planning & Design</a></h5>
-                        <p>We offer expert consultation and customized design services to create ultra
-                            high-density apple orchards tailored to your land's unique characteristics,
-                            maximizing productivity and sustainability.
-                        </p>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="services-box2 mb-30">
-                    <div class="services-icon">
-                        <i class="fas fa-tree" style="color: white;"></i>
-                    </div>
-                    <div class="services-content2">
-                        <h5><a href="services-detail.html">Supply of High-Yielding Trees</a></h5>
-                        <p>We provide top-quality apple trees on advanced rootstock sourced from Europe’s
-                            leading nurseries, ensuring your orchard’s success from the very start.</p>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="services-box2 mb-30">
-                    <div class="services-icon">
-                        <i class="fas fa-tools" style="color: white;"></i>
-                    </div>
-                    <div class="services-content2">
-                        <h5><a href="services-detail.html">Orchard Infrastructure Development</a></h5>
-                        <p>From trellising systems to irrigation solutions, we supply and install all necessary
-                            support structures to ensure optimal growth and ease of management.
-                        </p>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="services-box2 mb-30">
-                    <div class="services-icon">
-                        <i class="fas fa-chalkboard-teacher" style="color: white;"></i>
-                    </div>
-                    <div class="services-content2">
-                        <h5><a href="services-detail.html">Training & Technical Support</a></h5>
-                        <p>We empower farmers with the knowledge and skills needed to manage modern orchards
-                            through hands-on training and ongoing technical support, ensuring your long-term
-                            success. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="services-box2 mb-30">
-                    <div class="services-icon">
-                        <i class="fas fa-hand-holding-seedling" style="color: white;"></i>
-                    </div>
-                    <div class="services-content2">
-                        <h5><a href="services-detail.html">Post-Planting Management</a></h5>
-                        <p>Our services don’t stop at planting. We offer guidance on pruning, pest management,
-                            and overall orchard maintenance to help you achieve the highest yields possible.</p>
+<section id="home" class="slider-area slider-four fix p-relative">
+    <div class="slider-active">
+        <div class="single-slider slider-bg d-flex align-items-center" style="background: url(img/pic1.jpg) no-repeat; background-size: cover; background-position: center center;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12">
+                        <div class="slider-content s-slider-content text-center">
+                            <h1 data-animation="fadeInUp" data-delay=".4s">Farm Vision</h1>
+                            <h3 data-animation="fadeInUp" data-delay=".6s">Your Farm Our Vision</h3>
+                            <p data-animation="fadeInUp" data-delay=".8s">We build lasting relationships with farmers and partners, supporting orchards from concept to full bloom. Through collaboration, trust, and shared vision, we ensure every orchard thrives, and every farmer prospers, cultivating a successful and sustainable future together.</p>
+                            <div class="slider-btn mt-30">
+                                <a href="#about2" class="btn ss-btn mr-15" data-animation="fadeInRight" data-delay="1s">Read More</a>
+                                <a href="#services" class="btn ss-btn active" data-animation="fadeInRight" data-delay="1.2s">Contact Us</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="back-to-top text-center">
+        <a href="#about2" class="smooth-scroll"><img src="img/bg/back-to-top.png" alt="back-to-top"></a>
     </div>
 </section>
 <!-- services-area-end -->
@@ -896,18 +813,16 @@
                 <h2 class="agrisense-founder-heading">From the Founder</h2>
                 <div class="agrisense-founder-quote-box">
                     <div class="agrisense-founder-quote-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-                            <path fill="#8bc34a"
-                                d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.74 4.89c0 0-.218.052-.597.144-.377.093-.934.227-1.546.45-.384.11-.761.291-1.149.461-.395.167-.788.358-1.171.6-.412.213-.789.551-1.161.847-.362.302-.717.633-1.018.975-.326.323-.585.702-.754 1.064-.223.319-.392.682-.513 1.025-.12.344-.214.698-.226 1.026-.034.622.006 1.144.095 1.537.069.37.158.663.266.905.109.253.235.447.383.58.123.137.257.21.301.256.109.073.181.119.181.119l.993-.992c0 0-.115-.079-.238-.173-.122-.094-.277-.221-.359-.374-.09-.111-.176-.251-.232-.427-.065-.173-.104-.367-.104-.568 0-.191.022-.384.065-.571.046-.17.123-.339.21-.503.088-.162.217-.32.352-.445.104-.12.238-.238.373-.31.134-.089.271-.142.405-.207.133-.056.276-.113.399-.137.223-.055.454-.079.65-.079.321 0 .571.058.786.132.277.106.484.271.619.453.202.265.288.549.288.766 0 .467-.281.992-.793 1.327-.51.335-1.307.661-2.364.661-1.838 0-2.706-.616-2.706-2.423h-2.03c0 2.481 1.495 4.02 4.63 4.02 3.387 0 5.673-1.949 5.673-3.894C13.503 11.111 12.465 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.74 4.89c0 0-.218.052-.597.144-.377.093-.934.227-1.546.45-.384.11-.761.291-1.149.461-.395.167-.788.358-1.171.6-.412.213-.789.551-1.161.847-.362.302-.717.633-1.018.975-.326.323-.585.702-.754 1.064-.223.319-.392.682-.513 1.025-.12.344-.214.698-.226 1.026-.034.622.006 1.144.095 1.537.069.37.158.663.266.905.109.253.235.447.383.58.123.137.257.21.301.256.109.073.181.119.181.119l.993-.992c0 0-.115-.079-.238-.173-.122-.094-.277-.221-.359-.374-.09-.111-.176-.251-.232-.427-.065-.173-.104-.367-.104-.568 0-.191.022-.384.065-.571.046-.17.123-.339.21-.503.088-.162.217-.32.352-.445.104-.12.238-.238.373-.31.134-.089.271-.142.405-.207.133-.056.276-.113.399-.137.223-.055.454-.079.65-.079.321 0 .571.058.786.132.277.106.484.271.619.453.202.265.288.549.288.766 0 .467-.281.992-.793 1.327-.51.335-1.307.661-2.364.661-1.838 0-2.706-.616-2.706-2.423h-2.03c0 2.481 1.495 4.02 4.63 4.02 3.387 0 5.673-1.949 5.673-3.894C24.503 11.111 23.465 10 17.5 10z" />
-                        </svg>
+                       
+                        
                     </div>
-                    <p class="agrisense-founder-quote">Building close relationships with our farmers and partners is at
+                    <p class="agrisense-founder-quote">"Building close relationships with our farmers and partners is at
                         the heart of our mission. We believe that true progress in horticulture comes from
                         collaboration, trust, and a shared vision. From the initial concept of an orchard to its full
                         bloom, we stand by our stakeholders, nurturing these connections long after the trees have taken
                         root. Together, we are cultivating a future where every orchard thrives, and
-                        every farmer prospers</p>
-                    <p class="agrisense-founder-author">Ahsan Ali</p>
+                        every farmer prospers"</p>
+                    <p class="agrisense-founder-author">Ahsaan Ali</p>
                 </div>
             </div>
         </section>
@@ -1239,6 +1154,8 @@
                                             target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="https://www.instagram.com/farm_vision_?igsh=MXhuNXJtNHZ6aWYxYQ=="
                                             target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/farm-vision-a2584b323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+                                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>
